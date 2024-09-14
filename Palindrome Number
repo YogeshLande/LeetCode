@@ -27,8 +27,8 @@ class Solution {
 
         boolean result =  isPalindrome(num);
 
-        if(true){
-            System.out.println(" It is a Palindrome Number "+result);
+        if(result){
+            System.out.println(" It is a Palindrome Number ");
         }else{
             System.out.println("Number is not Palindrome");
         }
