@@ -1,0 +1,36 @@
+import java.util.*;
+
+class Solution {
+    public static boolean isPalindrome(int num) {
+        boolean result = false;
+        int reverse = 0;
+        int temp = num;
+
+        while(num>0){
+            int remd = num%10;
+            
+            reverse = reverse*10+remd;
+
+            num = num/10;
+        }
+        if(reverse==temp){
+            result =  true;
+        }
+     return result;
+    }
+    public static void main(String[]args){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a Number");
+
+        int num = sc.nextInt();
+
+        boolean result =  isPalindrome(num);
+
+        if(true){
+            System.out.println(" It is a Palindrome Number "+result);
+        }else{
+            System.out.println("Number is not Palindrome");
+        }
+    }
+}
