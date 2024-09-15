@@ -1,0 +1,42 @@
+// Reverse Integer Number Optimize Code
+
+import java.util.*;
+
+class Solution {
+    public static int reverse(int num) {
+
+        int remd = 0;
+        int originalnum = num;
+        
+         num = Math.abs(num);
+
+        while(num>0){
+            int lastnum = num%10;
+
+            if (remd > (Integer.MAX_VALUE - lastnum) / 10) {
+                return 0;                                          // Return 0 in case of overflow
+            }
+
+            remd = remd*10 + lastnum;
+
+            num = num/10;
+        }
+        if(originalnum<0){
+            remd = -remd;
+        }
+        
+        return remd;
+        
+    }
+    public static void main(String[]args){
+        Scanner Sc = new Scanner(System.in);
+       System.out.println("Enter a Number ");
+
+       int num = Sc.nextInt();
+      
+       int result = reverse(num);
+
+       System.out.println(result);
+
+    }
+}
