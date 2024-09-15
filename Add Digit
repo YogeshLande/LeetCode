@@ -1,0 +1,31 @@
+//Add Digits of Number until its remain single digit
+
+
+import java.util.*;
+class Solution {
+    public static int addDigits(int num) {
+
+        
+        if (num == 0) {
+            return 0;
+        } else {
+            return 1 + (num - 1) % 9;   //Directly Found Digital Root
+        }
+    }
+
+
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a Number");
+        int num = sc.nextInt();
+ 
+        int result = addDigits(num);
+
+        System.out.println(result);
+
+
+
+
+    }
+}
